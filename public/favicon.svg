@@ -1,0 +1,63 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark green background -->
+  <rect width="512" height="512" fill="#0D332E"/>
+  
+  <!-- Definitions for gradients and effects -->
+  <defs>
+    <!-- Gold gradient for 3D effect -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E5C589;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D4AF6A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8964F;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Inner shadow for depth -->
+    <filter id="innerShadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Rounded border frame with 3D effect -->
+  <rect x="95" y="95" width="322" height="322" rx="8" ry="8" 
+        stroke="url(#goldGradient)" stroke-width="18" fill="none" 
+        filter="url(#innerShadow)"/>
+  
+  <!-- Evergreen tree with trunk -->
+  <g transform="translate(256, 260)">
+    <!-- Tree trunk -->
+    <rect x="-12" y="65" width="24" height="35" rx="2" 
+          fill="url(#goldGradient)" filter="url(#innerShadow)"/>
+    
+    <!-- Tree outline - evergreen shape with zigzag edges -->
+    <path d="
+      M 0 -100
+      L -25 -60
+      L -15 -60
+      L -40 -20
+      L -25 -20
+      L -55 25
+      L -35 25
+      L -70 70
+      L 70 70
+      L 35 25
+      L 55 25
+      L 25 -20
+      L 40 -20
+      L 15 -60
+      L 25 -60
+      Z
+    " 
+    fill="url(#goldGradient)" 
+    stroke="#A67C3F" 
+    stroke-width="3"
+    filter="url(#innerShadow)"/>
+  </g>
+</svg>
