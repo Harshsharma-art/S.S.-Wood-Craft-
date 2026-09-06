@@ -1,6 +1,7 @@
 import { Award, Hammer, Ruler } from "lucide-react";
 
-import workshop from "@/assets/about-workshop.jpg";
+import workshop from "@/assets/about-workshop.jpeg";
+import logo from "/favicon.svg";
 import { SITE } from "@/lib/site";
 
 const STATS = [
@@ -24,8 +25,12 @@ export function About() {
           />
           <div className="surface-card absolute -bottom-8 left-6 right-6 rounded-sm p-6 sm:left-10 sm:right-auto sm:w-72">
             <div className="flex items-center gap-4">
-              <div className="grid size-14 shrink-0 place-items-center rounded-full bg-forest-gradient font-display text-xl text-primary-foreground">
-                S
+              <div className="grid size-14 shrink-0 place-items-center rounded-full bg-forest-gradient p-2 overflow-hidden">
+                <img 
+                  src={logo} 
+                  alt="S.S. WoodCraft Logo" 
+                  className="size-full object-contain"
+                />
               </div>
               <div>
                 <p className="font-display text-lg leading-tight">{SITE.founder}</p>
